@@ -28,12 +28,3 @@ HEADER_SCHEMA = {
 
 class SchemaResolutionError(Exception):
     pass
-
-
-def missing_codec_lib(codec, library):
-    def missing(fo):
-        raise ValueError(
-            "{} codec is supported but you ".format(codec)
-            + "need to install {}".format(library)
-        )
-    return missing
